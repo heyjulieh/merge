@@ -1,4 +1,5 @@
 <img src="https://cloud.githubusercontent.com/assets/6520345/22489560/f791fe8a-e7cc-11e6-9a84-40c8aa1311da.png" width="60">
+
 # Merge
 
 
@@ -45,30 +46,25 @@ Here's the basic idea of the merge algorithm:
 In big-`O()` notation, what is the runtime of Merge? How do you know?! Justify your answer here.
 
 Hints:
-  * <details><summary>
-  How many comparisons do you need to do to send one element into the results array?</summary>
-  It varies. Sometimes a number gets compared to multiple other numbers.  
+  * <details><summary> How many comparisons do you need to do to send one element into the results array?</summary>
+    It varies. Sometimes a number gets compared to multiple other numbers.  
   </details>
 
-  * <details><summary>
-  In the worst case, how many times do you need to add an element to the results array?</summary>
-  You will always need to add to the array exactly `m + n` times, if one array's size is `m` and the other is `n`.  
+  * <details><summary>In the worst case, how many times do you need to add an element to the results array?</summary>
+    You will always need to add to the array exactly `m + n` times, if one array's size is `m` and the other is `n`.  
   </details>
 
-  * <details><summary>
-  Given the answer to the two questions above, how many comparisons did you need to make?</summary>
-  Every time you made 1 comparison, you added 1 thing to the array. To get all the numbers from both arrays, you had to do this `n+m` times.  That makes this algorithm `O(n + m)`.
+  * <details><summary>Given the answer to the two questions above, how many comparisons did you need to make?</summary>
+    Every time you made 1 comparison, you added 1 thing to the array. To get all the numbers from both arrays, you had to do this `n+m` times.  That makes this algorithm `O(n + m)`.
   </details>
 
-  * <details><summary>
-  How can you simplify this big-`O()` result?</summary>
+  * <details><summary>How can you simplify this big-`O()` result?</summary>
+    You can use a trick to make this simpler:
 
-   You can use a trick to make this simpler:
-
-   - say the larger array's size is `n`
-   - we know the smaller array size (`m`) is less than or equal to `n`
-   - since big-`O()` overestimates, we can convert `O(m + n)` to `O(n + n)`
-   - simplify further to get  `O(n)`
+    - say the larger array's size is `n`
+    - we know the smaller array size (`m`) is less than or equal to `n`
+    - since big-`O()` overestimates, we can convert `O(m + n)` to `O(n + n)`
+    - simplify further to get  `O(n)`
   </details>
 
 #### But what about space?
@@ -137,11 +133,11 @@ rspec -e "different length"
   </summary>
     You will probably find you run out of elements to compare at some point.  If all the elements from one array have already been added to the results, what can you say about the rest of the elements left over in the other array?
 
-     <details><summary>click to see</summary>
+   <details><summary>click to see</summary>
      - All of the rest of the elements in the input array must be greater than every element in the results array.
      - All these elements are already in sorted order.
      - We can just add the rest of the elements to the results array!
-     </details>
+   </details>
   </details>
 
 <br>
