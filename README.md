@@ -102,30 +102,10 @@ How much space does this algorithm use, not counting the space to store the inpu
 Keep in mind all the different ways you can explore your code:
 
 **From the Command Line**:  
-```ruby
-ruby merge.rb # just make sure you're printing some output!
-```
-
-**In the REPL**:  
-```ruby
-irb
-# or
-pry
-```
-
-```ruby
-pry > require "merge.rb"
-pry > merge([],[])
-```
-
-**Using Rspec Tests**:   
 ```bash
-rspec
-# or
-rspec spec/merge_spec.rb
-# or, run an individual test
-rspec -e "different length"
+node merge.js # just make sure you're printing some output!
 ```
+
 
 #### Hints:
 
@@ -146,7 +126,7 @@ rspec -e "different length"
    You have to be able to compare! This would completely break the code, so it's a good case to test rule out inside your function.
   </details>
 
-<!-- 
+<!--
 ## Bonus: Partition
 
 Like merge sort uses an extra `merge` step, another  sorting algorithm called quick sort uses a `partition` step.  -->
